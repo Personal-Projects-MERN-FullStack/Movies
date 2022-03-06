@@ -31,35 +31,35 @@ const Slider = () => {
                 <div className="carousel-inner relative w-full overflow-hidden">
                     <div className="carousel-item active relative float-left w-full">
                         <img
-                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
-                            className="block w-full"
+                            src="https://image.tmdb.org/t/p/original//iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg"
+                            className="block w-full h-[500px]"
                             alt="..."
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
-                            <h5 className="text-xl">First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <h5 className="text-xl">Spider Man : No way Home</h5>
+                          
                         </div>
                     </div>
                     <div className="carousel-item relative float-left w-full">
                         <img
-                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
-                            className="block w-full"
+                            src="https://image.tmdb.org/t/p/original//5P8SmMzSNYikXpxil6BYzJ16611.jpg"
+                            className="block w-full h-[500px]"
                             alt="..."
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
-                            <h5 className="text-xl">Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <h5 className="text-xl">Batman</h5>
+                           
                         </div>
                     </div>
                     <div className="carousel-item relative float-left w-full">
                         <img
-                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
-                            className="block w-full"
+                            src="https://image.tmdb.org/t/p/original//3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg"
+                            className="block w-full h-[500px]"
                             alt="..."
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
-                            <h5 className="text-xl">Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <h5 className="text-xl">Encanto</h5>
+                           
                         </div>
                     </div>
                 </div>
