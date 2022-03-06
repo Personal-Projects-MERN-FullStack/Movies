@@ -46,12 +46,12 @@ function Example() {
               {moviedata?.map((movie) => {
 
                 return <li >
-                  <div className=" flex flex-row bg-gradient-to-r from-purple-500 to-pink-500 w-full h-20 ">
+                  <div className=" flex flex-row bg-gradient-to-r from-purple-500 to-pink-500 w-full h-20 items-center">
                     <div className='w-1/4 '>
                       <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} onClick={()=>{setid(movie.id); sethover(true)}} className="cursor-pointer h-16 w-16 rounded-full mt-2 ml-2"></img>
                     </div>
                     <div className='w-3/4  '>
-                      <span className=' text-xl font-bold  text-white cursor-pointer ' onClick={()=>{setid(movie.id); sethover(true)}}>{movie.original_title}</span>
+                      <span className=' text-lg font-bold  text-white cursor-pointer ' onClick={()=>{setid(movie.id); sethover(true)}}>{movie.original_title}</span>
                     </div>
                   </div>
                 </li>
