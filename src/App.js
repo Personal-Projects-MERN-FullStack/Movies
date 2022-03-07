@@ -1,13 +1,13 @@
 
-
-import Example from './component/Example'
+import React from 'react'
+import Moviepage from './component/Moviepage'
 
 export default function App() {
  
   return (
     <>
       
-      <Example/>
+      <Moviepage/>
       </>
    
   )
