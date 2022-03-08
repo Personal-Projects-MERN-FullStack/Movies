@@ -14,7 +14,7 @@ function Moviepage() {
   const [search, setsearch] = useState(false)
   const [searchdata, setsearchdata] = useState('')
   const [page, setpage] = useState(1)
-
+  const [sort, setsort] = useState(false)
 
 
 
@@ -25,9 +25,11 @@ function Moviepage() {
       const json = await response.json()
       const data = await json.data.results
       setloading(false)
-      setmoviedata(data)
+      if (sort) {
+        setmoviedata(data.sort(function (a, b) { return new Date(b.release_date).valueOf() - new Date(a.release_date).valueOf(); }))
+      } else if (!sort) { setmoviedata(data) }
     } catch (e) { alert(`Pls Chekc Your Internet Connection or Refresh Page ${e}`) }
-  }, [page])
+  }, [page, sort])
   const onclickhander = () => {
     setsearch(false)
     setsearchdata('')
@@ -89,13 +91,15 @@ function Moviepage() {
           <div className="flex flex-col mt-3 mx-8 items-center" >
             <div className="top flex flex-row space-x-3 items-center">
               <div className="border-4 border-yellow-300 h-8"></div>
-              <div className="text-2xl text-white font-bold">Popular Movies</div>
+              <div className="text-2xl text-white font-bold">Popular Movies
+                
+              </div>
               <div className="text-3xl font-extrabold text-white">&#x3e;</div>
             </div>
 
           </div>
           <div className="sort mr-8 lg:w-[100px]">
-            <Dropdown></Dropdown>
+            <Dropdown setsort={setsort}></Dropdown>
           </div>
 
         </div>
