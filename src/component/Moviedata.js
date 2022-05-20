@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {motion} from 'framer-motion';
 
 
 function Moviedata({ movie ,setid, sethover }) {
@@ -13,7 +13,7 @@ function Moviedata({ movie ,setid, sethover }) {
         <>
 
 
-            <div className="flex flex-col gap-1 mt-8" >
+            <motion.div  className="flex flex-col gap-1 mt-8" >
 
                
                 <div href="" className="bg-white cursor-pointer" onClick={()=> {setid(id); sethover(true)}}>
@@ -34,7 +34,7 @@ function Moviedata({ movie ,setid, sethover }) {
                 
                 </div>
 
-            </div>
+            </motion.div>
             
 
 
