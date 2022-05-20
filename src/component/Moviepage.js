@@ -62,8 +62,8 @@ function Moviepage() {
         </div>
       )}
       {!loading && (
-        <div>
-          <div className="w-screen h-16 flex  flex-row items-center bg-gradient-to-r from-purple-500 to-pink-500">
+        <motion.div exit={{ opacity: 0 }}>
+          <div className="w-screen h-16 flex  flex-row items-center bg-gray-700">
             <div className="w-1/4">
               <img
                 src={logo}
@@ -96,7 +96,7 @@ function Moviepage() {
           <div
             className={`hidden ${
               search && "lg:hidden"
-            }   lg:flex lg:flex-row lg-w-full  lg:h-[500px] bg-gradient-to-r from-purple-500 to-pink-500`}
+            }   lg:flex lg:flex-row lg-w-full  lg:h-[500px] bg-gray-700`}
           >
             <div className="slider w-3/4  overflow-hidden">
               <Slider />
@@ -145,7 +145,7 @@ function Moviepage() {
               </motion.ul>
             </motion.div>
           </div>
-          <div className="flex flex-row pt-3  items-center  w-full bg-gradient-to-r from-purple-500 to-pink-500 md:justify-between">
+          <div className="flex flex-row pt-3  items-center  w-full bg-gray-700 md:justify-between">
             <div className="flex flex-col mt-3 mx-8 items-center">
               <div className="top flex flex-row space-x-3 items-center">
                 <div className="border-4 border-yellow-300 h-8"></div>
@@ -159,7 +159,7 @@ function Moviepage() {
               <Dropdown setsort={setsort}></Dropdown>
             </div>
           </div>
-          <div className="h-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+          <div className="h-full bg-gray-700 flex items-center justify-center">
             <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-2 px-16 py-8">
               {moviedata
                 ?.filter((movie) => {
@@ -216,7 +216,7 @@ function Moviepage() {
 
             {hover && <Hover id={id} sethover={sethover}></Hover>}
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   );
